@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(15, 15, 85);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 80px;
+      background-color: rgb(19, 19, 70);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      list-style: none;
+      margin: 0 23px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown-list {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: rgb(5, 5, 36);
+      padding: 10px;
+      z-index: 1;
+      border-radius: 5px;
+      border: 1px solid white;
+    }
+
+    .dropdown-list.visible {
+      display: block;
+    }
+
+    .heading {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .sub-heading li {
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    .select-here {
+      cursor: pointer;
+    }
+
+    main {
+      background-color: rgb(2, 2, 37);
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .firstsection {
+      padding-top: 23px;
+      width: 30%;
+      font-size: 3rem;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+    }
+
+    .secondsection {
+      padding-top: 23px;
+      width: 37%;
+    }
+
+    .leftsection>div>div {
+      justify-content: space-around;
+      width: 100%;
+      height: 90%;
+      align-items: center;
+    }
+
+    .rightsection div {
+      display: flex;
+      justify-content: space-around;
+
+      width: 100%;
+    }
+
+    footer {
+      background-color: rgb(5, 5, 36);
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: rgb(4, 4, 44);
+      padding: 2px;
+      padding-top: 8px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-content {
+      margin-bottom: 0px;
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .social-media a {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    .social-media a:hover {
+      transform: scale(1.2);
+    }
+
+    .social-media a:hover .social-media-icon {
+      filter: brightness(1.2);
+    }
+
+    .social-media a .social-media-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      filter: brightness(0.8);
+    }
+
+    .social-media a .social-media-text {
+      font-size: 10px;
+      color: white;
+    }
+
+
+    .close {
+      position: absolute;
+      top: 5px;
+      right: 3px;
+      cursor: pointer;
+      display: block;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav ul li {
+      /* Existing styles */
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    nav ul li:hover {
+      background-color: rgb(21, 23, 109);
+      transform: scale(1.2);
+    }
+
+    nav ul li:hover,
+    nav ul li:hover a {
+      cursor: pointer;
+      cursor: hand;
+    }
+
+    nav ul li.heading {
+      cursor: default;
+      transform: none;
+    }
+
+    nav ul li.heading:hover {
+      background-color: transparent;
+    }
+
+    .dropdown-list .heading:nth-child(2):hover {
+      background-color: initial;
+      transform: initial;
+    }
+
+    /* Remove hover effect on heading for Class 12 */
+    .dropdown-list .heading:nth-child(4):hover {
+      background-color: initial;
+      transform: initial;
+    }
+
+    /* Reset CSS (optional, you can keep the existing reset code) */
+    /* ... */
+
+    /* Add a new media query for smaller screens (e.g., mobile phones) */
+    @media (max-width: 767px) {
+      nav {
+        height: auto;
+        flex-direction: column;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      .dropdown-list {
+        right: 50%;
+        transform: translateX(50%);
+      }
+
+      .firstsection,
+      .secondsection {
+        width: 100%;
+      }
+
+      .leftsection,
+      .rightsection {
+        padding: 0;
+        text-align: center;
+      }
+
+      .leftsection>div>div {
+        align-items: flex-start;
+      }
+
+      footer {
+        padding: 10px;
+      }
+
+      .footer-content {
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Add a new media query for medium-sized screens (e.g., tablets) */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      .dropdown-list {
+        right: 0;
+        transform: none;
+      }
+
+      .firstsection {
+        width: 40%;
+      }
+
+      .secondsection {
+        width: 55%;
+      }
+    }
+
+    /* Add a new media query for larger screens (e.g., desktops) */
+    @media (min-width: 1024px) {
+      nav ul li {
+        margin: 0 23px;
+      }
+
+      .firstsection {
+        width: 30%;
+      }
+
+      .secondsection {
+        width: 37%;
+      }
+    }
+
+    /* Add a new media query to handle small footer content on smaller screens */
+    @media (max-width: 400px) {
+      footer .footer-content {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">
+        Santosh Raut
+      </div>
+      <div class="right">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li class="dropdown">
+            <a class="select-here">Select here</a>
+            <ul class="dropdown-list">
+              <li class="heading">
+                <span class="close">&times;</span>
+                Class 11
+              </li>
+              <ul class="sub-heading">
+                <li class="subject" data-class="11" data-subject="Physics">Physics</li>
+                <li class="subject" data-class="11" data-subject="Chemistry">Chemistry</li>
+              </ul>
+              <li class="heading">Class 12</li>
+              <ul class="sub-heading">
+                <li class="subject" data-class="12" data-subject="Computer">Computer</li>
+                <li class="subject" data-class="12" data-subject="Physics">Physics</li>
+                <li class="subject" data-class="12" data-subject="Chemistry">Chemistry</li>
+              </ul>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="firstsection">
+      <div class="leftsection">
+        <div></div>
+      </div>
+    </section>
+    <section class="secondsection">
+      <div class="rightsection">
+        <img src="boy-gec6207e4d_1920.png" alt="student image" style="max-width: 95%;">
+      </div>
+    </section>
+  </main>
+  <footer class="wave-animation">
+
+    <div class="footer-content">
+      <p>&copy; 2023 Santosh Raut. All rights reserved.</p>
+      <p>Designed and developed by <a href="https://www.example.com">Santosh Raut</a></p>
+    </div>
+    <div class="social-media">
+      <a href="https://www.facebook.com/profile.php?id=100042576018619">
+        <img src="facebook.png" alt="Facebook" class="social-media-icon">
+        <span class="social-media-text">Facebook</span>
+      </a>
+      <a href="https://www.instagram.com/santosh_raut_11/">
+        <img src="instagram.png" alt="Instagram" class="social-media-icon">
+        <span class="social-media-text">Instagram</span>
+      </a>
+      <a href="https://twitter.com/Scienceario">
+        <img src="twitter.png" alt="Twitter" class="social-media-icon">
+        <span class="social-media-text">Twitter</span>
+      </a>
+    </div>
+  </footer>
+
+
+  <script>
+    const phrases = [
+      " Hello Friend",
+      " Looking for Notes?",
+      " You are in the right place!"
+    ];
+    const delay = 100; // Delay between each action (in milliseconds)
+    const element = document.querySelector('.leftsection > div');
+    let currentPhraseIndex = 0;
+    let currentCharacterIndex = 0;
+    let eraseMode = false;
+
+    function typeEffect() {
+      const currentPhrase = phrases[currentPhraseIndex];
+      const isLastCharacter = currentCharacterIndex === currentPhrase.length - 1;
+
+      if (eraseMode) {
+        element.textContent = currentPhrase.slice(0, currentCharacterIndex);
+        currentCharacterIndex--;
+
+        if (currentCharacterIndex === 0) {
+          eraseMode = false;
+          currentPhraseIndex++;
+          if (currentPhraseIndex >= phrases.length) {
+            currentPhraseIndex = 0;
+          }
+        }
+      } else {
+        element.textContent += currentPhrase.charAt(currentCharacterIndex);
+        currentCharacterIndex++;
+
+        if (isLastCharacter) {
+          eraseMode = true;
+        }
+      }
+
+      setTimeout(typeEffect, isLastCharacter && eraseMode ? delay * 2 : delay);
+    }
+
+    typeEffect();
+
+    const dropdown = document.querySelector('.dropdown');
+    const selectHere = document.querySelector('.select-here');
+    const dropdownList = document.querySelector('.dropdown-list');
+    const closeIcon = document.querySelector('.close');
+
+    function toggleDropdown() {
+      dropdownList.classList.toggle('visible');
+    }
+
+    function hideDropdown() {
+      dropdownList.classList.remove('visible');
+    }
+
+    selectHere.addEventListener('click', toggleDropdown);
+    closeIcon.addEventListener('click', hideDropdown);
+
+    document.addEventListener('click', (event) => {
+      if (!dropdown.contains(event.target) && !selectHere.contains(event.target)) {
+        hideDropdown();
+      }
+    });
+
+    const dropdownRect = dropdown.getBoundingClientRect();
+    const dropdownWidth = dropdownRect.width;
+    dropdownList.style.right = `${dropdownWidth / 2}px`;
+
+    const subjects = document.querySelectorAll('.subject');
+    subjects.forEach(function (subject) {
+      subject.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const classValue = subject.dataset.class;
+        const subjectValue = subject.dataset.subject;
+        let url;
+
+        if (classValue === '11') {
+          if (subjectValue === 'Physics') {
+            url = 'physics11.html';
+          } else if (subjectValue === 'Chemistry') {
+            url = 'chemistry11.html';
+          }
+        } else if (classValue === '12') {
+          if (subjectValue === 'Computer') {
+            url = 'computer12.html';
+          } else if (subjectValue === 'Physics') {
+            url = 'physics12.html';
+          } else if (subjectValue === 'Chemistry') {
+            url = 'chemistry12.html';
+          }
+        }
+
+        if (url) {
+          window.location.href = url;
+        }
+      });
+    });
+
+    const homeLink = document.querySelector('nav ul li:nth-child(1)');
+    homeLink.addEventListener('click', function () {
+      location.reload(); // Refresh the page
+    });
+
+    // Add event listener for "About" click
+    const aboutLink = document.querySelector('nav ul li:nth-child(2)');
+    aboutLink.addEventListener('click', function () {
+      window.location.href = 'aboutus.html'; // Navigate to aboutus.html
+    });
+
+
+  </script>
+
+
+</body>
+
+</html>

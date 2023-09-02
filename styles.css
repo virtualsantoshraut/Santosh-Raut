@@ -1,0 +1,413 @@
+* {
+  padding: 0;
+  margin: 0px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins","Sans-Serif";
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  /* Add other styling properties as needed */
+}
+
+.logo {
+  float: left;
+  /* Add logo styling properties as needed */
+}
+
+.menu {
+  float: right;
+  /* Add menu styling properties as needed */
+}
+
+.menu a {
+  margin-left: 10px;
+  /* Add link styling properties as needed */
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f8f8f8;
+  /* Add dropdown content styling properties as needed */
+}
+
+.hidden bg-white w-48 p-2 shadow-lg absolute right-0 mt-16 mr-2 rounded a {
+  display: block;
+  padding: 10px;
+  /* Add dropdown link styling properties as needed */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+main {
+  margin-top: 60px;
+  /* Adjust the margin-top value to match the height of your navbar */
+  overflow-y: scroll;
+  width: 100%;
+  /* Add main content styling properties as needed */
+}
+
+nav {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  /* Add other styling properties as needed */
+}
+
+nav .logo {
+  /* Add logo styling properties as needed */
+}
+
+nav .menu {
+  /* Add menu styling properties as needed */
+}
+
+nav .menu a {
+  /* Add link styling properties as needed */
+}
+
+nav .dropdown-content {
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  /* Add dropdown content styling properties as needed */
+}
+
+nav .dropdown-content a {
+  /* Add dropdown link styling properties as needed */
+}
+
+p {
+  padding-left: 40px;
+
+}
+
+li {
+ 
+  padding-left: 40px;
+  padding-top: 5px;
+}
+
+#menu {
+  /* position: relative; */
+  z-index: auto;
+  overflow-y: auto;
+  max-height: 600px;
+  padding-bottom: 0%;
+  /* Adjust the maximum height as needed */
+  padding-right: 0px;
+  box-shadow: #0c0c0c;
+}
+
+#menu button {
+  cursor: pointer;
+  /* position: sticky;
+    background-color: black;
+    width: 100%; */
+  position: relative;
+  top: 0;
+  right: 0;
+  /* margin-top: ; */
+}
+
+#menu ul {
+  position: relative;
+  margin-top: 0rem;
+}
+
+#menu li {
+  margin-bottom: 0.5rem;
+  font-size: small;
+  padding-right: 1.5rem;
+  padding-left: 0px;
+}
+
+#menu li a {
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  outline: whitesmoke (1.05);
+}
+
+.navbar-scrolled {
+  background-color: #333;
+}
+
+.chapter-section {
+  padding: 1rem;
+  color: #333;
+}
+
+p {
+  padding-right: 10%;
+  text-align: justify;
+}
+
+#chapter1 {
+  background-color: #F7FAFC;
+}
+
+#chapter2 {
+  background-color: #EDF2F7;
+}
+
+#chapter3 {
+  background-color: #E2E8F0;
+}
+
+#chapter4 {
+  background-color: #CBD5E0;
+}
+
+#chapter5 {
+  background-color: #FEEBC8;
+  color: #333;
+  /* Changing text color for better readability */
+}
+
+#chapter6 {
+  background-color: #FBD38D;
+  color: #333;
+  /* Changing text color for better readability */
+}
+
+#chapter7 {
+  background-color: #F6AD55;
+  /* color: #fff; /* Changing text color to white for better readability */
+}
+
+#chapter8 {
+  background-color: #ED8936;
+  /* color: #fff; /* Changing text color to white for better readability */
+}
+
+#chapter9 {
+  background-color: #ded0c6;
+  /*color: #fff; /* Changing text color to white for better readability */
+}
+
+#chapter10 {
+  background-color: #A0AEC0;
+}
+
+#chapter11 {
+  background-color: #84d8ff;
+}
+
+#chapter12 {
+  background-color: #9fb9e6;
+}
+
+#chapter13 {
+  background-color: #558ef0;
+  color: #000000;
+  /* Changing text color to white for better readability */
+}
+
+#chapter14 {
+  background-color: #7ff7d3;
+  color: #000000;
+  /* Changing text color to white for better readability */
+}
+
+#chapter15 {
+  background-color: #f99b6d;
+  color: #000000;
+  /* Changing text color to white for better readability */
+}
+
+#chapter16 {
+  background-color: #85654c;
+  color: #000000;
+  /* Changing text color to white for better readability */
+}
+
+#chapter17 {
+  background-color: #e6ad5d;
+  color: #000000;
+  /* Changing text color to white for better readability */
+}
+
+#chapter18 {
+  background-color: #e45b42;
+  color: #000000;
+  /* Changing text color to white for better readability */
+}
+
+#chapter19 {
+  background-color: #5de671;
+  color: #000000;
+  /* Changing text color to white for better readability */
+}
+
+#chapter20 {
+  background-color: #5de6e4;
+  color: #000000;
+  /* Changing text color to white for better readability */
+}
+
+#chapter21 {
+  background-color: #4131f0;
+  color: #000000;
+  /* Changing text color to white for better readability */
+}
+
+#chapter22 {
+  background-color: #5379cd;
+  color: #000000;
+  /* Changing text color to white for better readability */
+}
+
+#chapter23 {
+  background-color: #e74b77;
+  color: #000000;
+  /* Changing text color to white for better readability */
+}
+
+#chapter24 {
+  background-color: #e65d86;
+  color: #000000;
+  /* Changing text color to white for better readability */
+}
+
+#chapter25 {
+  background-color: #86519c;
+  color: #000000;
+  /* Changing text color to white for better readability */
+}
+
+#chapter26 {
+  background-color: #ffffff;
+  color: #000000;
+  /* Changing text color to white for better readability */
+}
+
+/* Add more styles and colors for additional chapters */
+.timeline-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.timeline {
+  width: 200%;
+  height: 3px;
+  background-color: #333;
+  cursor: grab;
+}
+
+.timeline:active {
+  cursor: grabbing;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  border: 5px solid;
+  padding-left: 43px;
+  background-color: aliceblue;
+  margin: 10px 6%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+/* Footer CSS */
+footer {
+  margin-top: 30px;
+  margin-left: 0%;
+  margin-right: 0px;
+  background-color: #000000;
+  color: whitesmoke;
+  padding: 50px;
+}
+
+.footer-content {
+  display: flex;
+
+}
+
+.footer-content p {
+  padding-right: 10%;
+  margin-left: 3%;
+  padding-right: 3%;
+  /* font-size: 10px; */
+}
+
+#knowmore {
+  margin-left: 6%;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.contact {
+  margin-right: 5px;
+  padding: 13px;
+  width: 50%;
+}
+
+h1,
+h2 {
+  margin-left: 1%;
+}
+
+h3,
+h4 {
+  margin-left: 3%;
+}
+
+strong {
+  margin-left: 3%;
+  padding: 3px;
+}
+
+pre {
+  margin-left: 4%;
+  font-size: 17px;
+  width: max-content;
+  padding: 5px;
+  padding-right: 20px;
+  background-color: #333;
+  color: whitesmoke;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+code,
+.equation {
+  margin-left: 6%;
+  font-weight: 600;
+}
+
+table img {
+  width: 20%;
+  display: inline;
+}
